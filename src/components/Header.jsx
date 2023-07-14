@@ -22,7 +22,7 @@ const Header = () => {
           />
         </div>
         <div>
-          <ul className="flex space-x-10">
+          <ul className="flex space-x-10 items-center">
             <li
               className={`cursor-pointer py-3 text-sm font-semibold text-gray-400    ${
                 pathMatchRoute("/") &&
