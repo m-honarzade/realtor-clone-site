@@ -7,13 +7,13 @@ import { doc, updateDoc } from "firebase/firestore";
 import { db } from "../firebase";
 
 const Profile = () => {
+  const auth = getAuth();
   const [changeDetail, setChangeDetail] = useState(false);
   const [formData, setFormData] = useState({
-    name: "hadi",
-    email: "hamadani@yahoo.com",
+    name: auth.currentUser.displayName,
+    email: auth.currentUser.email,
   });
   const { name, email } = formData;
-  const auth = getAuth();
   const navigate = useNavigate();
   const onLogout = () => {
     auth.signOut();
