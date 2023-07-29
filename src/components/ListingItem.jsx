@@ -1,15 +1,15 @@
 import React from "react";
-// import Moment from "react-moment";
+
 // import moment from "moment";
-// import Moment from "react-moment";
+import Moment from "react-moment";
 import { Link } from "react-router-dom";
 import { MdLocationOn } from "react-icons/md";
 import { FaTrash } from "react-icons/fa";
 import { MdEdit } from "react-icons/md";
 
 const ListingItem = ({ listing, id, OnDelete, onEdit }) => {
-  const listingDate = listing.timeStamp?.toDate();
-  console.log(listingDate);
+  // const listingDate = listing.timeStamp?.toDate();
+  // console.log(listingDate);
   return (
     <li className="  m-[10px] relative bg-white flex flex-col shadow-md hover:shadow-xl rounded-md transition-shadow duration-150 overflow-hidden justify-between items-center ">
       <Link to={`/category/${listing.type}/${id}`} className="contents">
@@ -18,10 +18,15 @@ const ListingItem = ({ listing, id, OnDelete, onEdit }) => {
           className="h-[170px] w-full object-cover hover:scale-105 transition-scale duration-200 ease-in"
           loading="lazy"
         />
-        <p className="absolute top-2 left-2 bg-[#3377cc] rounded-md px-2 py-1 shadow-lg text-white uppercase text-xs font-semibold">
+        {/* <p className="absolute top-2 left-2 bg-[#3377cc] rounded-md px-2 py-1 shadow-lg text-white uppercase text-xs font-semibold">
           4 months ago
-        </p>
-        {/* <Moment>{listingDate}</Moment> */}
+        </p> */}
+        <Moment
+          fromNow
+          className="absolute top-2 left-2 bg-[#3377cc] rounded-md px-2 py-1 shadow-lg text-white uppercase text-xs font-semibold"
+        >
+          {listing.timeStamp?.toDate()}
+        </Moment>
         <div className="w-full p-[10px]">
           <div className="flex space-x-1 items-center">
             <MdLocationOn className="h-4 w-4 text-green-600" />
