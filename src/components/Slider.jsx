@@ -68,7 +68,7 @@ const Slider = () => {
                 }}
                 className="w-full overflow-hidden h-[300px] relative "
               ></div>
-              <p className="text-[#f1faee] absolute left-1 top-3 bg-[#457b9d] font-medium p-2 rounded-br-3xl shadow-lg max-w-[90%] opacity-90">
+              <p className="text-[#f1faee] absolute left-1 top-3 bg-[#457d9b] font-medium p-2 rounded-br-3xl shadow-lg max-w-[90%] opacity-90">
                 {data.name}
               </p>
               <p className="text-[#f1faee] absolute left-1 bottom-1 bg-[#e63946] font-semibold p-2 rounded-tr-3xl shadow-lg max-w-[90%] opacity-90">
